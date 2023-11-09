@@ -1,6 +1,8 @@
 import './App.css';
-import ImmerDemoe from './Component/immerDemo';
+import ImmerDemoe from '@/component/ImmerDemo';
+import useTitle from '@/hooks/useTitle';
 function App() {
+	useTitle('啦啦啦');
 	return (
 		<>
 			<ImmerDemoe />
