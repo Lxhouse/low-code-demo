@@ -1,7 +1,11 @@
 import './App.css';
-
+import ImmerDemoe from './Component/immerDemo';
 function App() {
-	return <>react demo</>;
+	return (
+		<>
+			<ImmerDemoe />
+		</>
+	);
 }
 
 export default App;
