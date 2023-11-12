@@ -1,13 +1,10 @@
 import './App.css';
-import ImmerDemoe from '@/component/ImmerDemo';
+import { RouterProvider } from 'react-router-dom';
 import useTitle from '@/hooks/useTitle';
+import routerConfig from '@/router';
 function App() {
 	useTitle('啦啦啦');
-	return (
-		<>
-			<ImmerDemoe />
-		</>
-	);
+	return <RouterProvider router={routerConfig} />;
 }
 
 export default App;
