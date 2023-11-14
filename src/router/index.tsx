@@ -4,6 +4,7 @@ import Home from '@/components/Home';
 import TestPage from '@/components/TestPage';
 import NotFound from '@/components/NotFound';
 import QuestionLayout from '@/layouts/QuestionLayout';
+import ScrollEvent from '@/components/ScrollEvent';
 const router = createBrowserRouter([
 	{
 		path: '/',
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
 	{
 		path: 'question/:id',
 		element: <QuestionLayout />,
+	},
+	{
+		path: 'scrollEvent',
+		element: <ScrollEvent />,
 	},
 ]);
 

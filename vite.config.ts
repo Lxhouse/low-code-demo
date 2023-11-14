@@ -11,6 +11,13 @@ export default defineConfig({
 			'@': path.resolve(__dirname, './src'),
 		},
 	},
+	css: {
+		preprocessorOptions: {
+			less: {
+				javascriptEnabled: true,
+			},
+		},
+	},
 	server: {
 		host: 'localhost', // 指定服务器主机名
 		port: 5173, // 指定服务器端口
