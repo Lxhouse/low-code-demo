@@ -1,17 +1,30 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useRequest } from 'ahooks';
+import { getTestDate } from '@/services/test';
 
 interface propsType {}
 const Home: FC<propsType> = () => {
+	// const [name, setName] = useState('');
 	const nav = useNavigate();
 	const goQuestion = () => {
 		nav('/question/12');
 		// nav('test');
 	};
+	const { loading, data } = useRequest(getTestDate);
+	// useEffect(() => {
+	// 	const getData = async () => {
+	// 		const data = await getTestDate();
+	// 		const { name = '' } = data || {};
+	// 		setName(name);
+	// 	};
+	// 	getData();
+	// }, []);
 	return (
 		<div>
 			home页面
 			<button onClick={goQuestion}>去问答页面</button>
+			<div>请求回来的数据===》{loading ? 'loading...' : data?.name}</div>
 			<br />
 			<Link to={'/question/13?keyword=123321'}>带keyWord去问答页面</Link>
 			<br />
