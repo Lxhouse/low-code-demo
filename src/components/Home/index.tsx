@@ -11,7 +11,7 @@ const Home: FC<propsType> = () => {
 		nav('/question/12');
 		// nav('test');
 	};
-	const { loading, data } = useRequest(getTestDate);
+	const { loading, data, run, refresh } = useRequest(getTestDate, { manual: true, debounceWait: 500, onSuccess: (res) => res });
 	// useEffect(() => {
 	// 	const getData = async () => {
 	// 		const data = await getTestDate();
@@ -29,6 +29,8 @@ const Home: FC<propsType> = () => {
 			<Link to={'/question/13?keyword=123321'}>带keyWord去问答页面</Link>
 			<br />
 			<Link to={'/test'}>去测试页面</Link>
+			<button onClick={run}>手动请求</button>
+			<button onClick={refresh}>重新请求</button>
 		</div>
 	);
 };
