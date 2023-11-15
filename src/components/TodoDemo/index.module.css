@@ -1,0 +1,7 @@
+.todoItemWarp {
+  border: solid 1px #ba7c7c;
+  height: 100px;
+}
+.todoItemWarp .isDelete {
+  text-decoration: line-through;
+}

@@ -6,6 +6,7 @@ import NotFound from '@/components/NotFound';
 import QuestionLayout from '@/layouts/QuestionLayout';
 import ScrollEvent from '@/components/ScrollEvent';
 import CountReduxDemo from '@/components/CountReduxDemo';
+import TodoDemo from '@/components/TodoDemo';
 const router = createBrowserRouter([
 	{
 		path: '/',
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
 	{
 		path: 'countReduxDemo',
 		element: <CountReduxDemo />,
+	},
+	{
+		path: 'todoDemo',
+		element: <TodoDemo />,
 	},
 ]);
 
