@@ -5,6 +5,7 @@ import TestPage from '@/components/TestPage';
 import NotFound from '@/components/NotFound';
 import QuestionLayout from '@/layouts/QuestionLayout';
 import ScrollEvent from '@/components/ScrollEvent';
+import CountReduxDemo from '@/components/CountReduxDemo';
 const router = createBrowserRouter([
 	{
 		path: '/',
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
 	{
 		path: 'scrollEvent',
 		element: <ScrollEvent />,
+	},
+	{
+		path: 'countReduxDemo',
+		element: <CountReduxDemo />,
 	},
 ]);
 
